@@ -1,6 +1,6 @@
 import React from 'react';
-import Veggie from './Veggie';
-import Popular from './Popular';
+import Veggie from '../components/Veggie';
+import Popular from '../components/Popular';
 
 const Home = () => {
   return (
