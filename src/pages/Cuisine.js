@@ -19,6 +19,10 @@ const Cuisine = () => {
     getCuisine(type);
   }, [type]);
 
+  if (cuisine.length === 0) {
+    return <div>Loading {type} dishes...</div>;
+  }
+
   return (
     <>
       <h1 className="header">{type}</h1>

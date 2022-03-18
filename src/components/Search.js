@@ -26,12 +26,14 @@ const Search = () => {
 };
 
 const FormStyle = styledComponents.form`
-margin: 0rem 20rem;
+
 position: relative;
 
+
 div{
-  width: 100%;
+  max-width: 35rem;
   position: relative;
+  margin: auto;
 }
 
 input{
@@ -48,7 +50,7 @@ input{
 svg{
   position: absolute;
   top: 50%;
-  left: 50%;
+  left: 0%;
   transform: translate(100%, -50%);
   color: white;
 }`;
