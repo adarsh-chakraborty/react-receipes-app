@@ -8,11 +8,18 @@ const Cuisine = () => {
   const [cuisine, setCuisine] = useState([]);
 
   const getCuisine = async (name) => {
+    const check = localStorage.getItem(`cuisine-${name}`);
+
+    if (check) {
+      setCuisine(JSON.parse(check));
+      return;
+    }
     const data = await fetch(
       `https://api.spoonacular.com/recipes/complexSearch?apiKey=${process.env.REACT_APP_APIKEY}&cuisine=${name}`
     );
     const recipes = await data.json();
     setCuisine(recipes.results);
+    localStorage.setItem(`cuisine-${name}`, JSON.stringify(recipes.results));
   };
 
   useEffect(() => {

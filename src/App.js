@@ -12,7 +12,7 @@ function App() {
     <BrowserRouter>
       <Nav>
         <GiKnifeFork />
-        <Logo to="/">React Recipes</Logo>
+        <Logo to="/">Recipess Hub</Logo>
       </Nav>
       <Search />
       <Category />
